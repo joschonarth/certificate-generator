@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { PrimaryButtonComponent } from "./components/primary-button/primary-button.component";
 import { SecondaryButtonComponent } from "./components/secondary-button/secondary-button.component";
 import { CertificateItemComponent } from "./components/certificate-item/certificate-item.component";
+import { BaseUiComponent } from "./components/base-ui/base-ui.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent, CertificateItemComponent],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent, CertificateItemComponent, BaseUiComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -4,11 +4,12 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
 import { PrimaryButtonComponent } from "./components/primary-button/primary-button.component";
 import { SecondaryButtonComponent } from "./components/secondary-button/secondary-button.component";
+import { CertificateItemComponent } from "./components/certificate-item/certificate-item.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent, CertificateItemComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

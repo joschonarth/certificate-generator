@@ -7,11 +7,12 @@ import { SecondaryButtonComponent } from "./components/secondary-button/secondar
 import { CertificateItemComponent } from "./components/certificate-item/certificate-item.component";
 import { BaseUiComponent } from "./components/base-ui/base-ui.component";
 import { CertificatesComponent } from "./pages/certificates/certificates.component";
+import { CertificateFormComponent } from "./pages/certificate-form/certificate-form.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent, CertificateItemComponent, BaseUiComponent, CertificatesComponent],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent, CertificateItemComponent, BaseUiComponent, CertificatesComponent, CertificateFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

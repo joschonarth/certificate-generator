@@ -1,0 +1,15 @@
+{
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.nodePath": "./node_modules",
+  "eslint.runtime": "node",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "html"
+  ]
+}

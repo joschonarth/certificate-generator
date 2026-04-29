@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CertificateItemComponent } from "../../components/certificate-item/certificate-item.component";
+import { CertificateItemComponent } from '../../components/certificate-item/certificate-item.component';
 
 @Component({
   selector: 'app-certificates',

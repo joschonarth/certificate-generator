@@ -23,4 +23,8 @@ export class CertificateFormComponent {
   formValid() {
     return this.activities.length > 0 && this.name.length > 0;
   }
+
+  addActivity() {
+    this.activities.push(this.activity);
+  }
 }

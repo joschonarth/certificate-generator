@@ -26,5 +26,10 @@ export class CertificateFormComponent {
 
   addActivity() {
     this.activities.push(this.activity);
+    this.activity = '';
+  }
+
+  removeActivity(index: number) {
+    this.activities.splice(index, 1);
   }
 }

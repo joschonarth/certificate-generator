@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { SecondaryButtonComponent } from '../../components/secondary-button/secondary-button.component';
 import { PrimaryButtonComponent } from '../../components/primary-button/primary-button.component';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Certificate } from '../../interfaces/certificate';
 import { CertificateService } from '../../services/certificate.service';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-certificate-form',
@@ -17,7 +18,10 @@ export class CertificateFormComponent {
 
   constructor(private certificateService: CertificateService) {}
 
+  @ViewChild('form') form!: NgForm;
+
   certificate: Certificate = {
+    id:  '',
     activities: [],
     name: '',
     issueDate: ''
@@ -33,6 +37,9 @@ export class CertificateFormComponent {
   }
 
   addActivity() {
+    if (this.activity.length === 0) {
+      return;
+    }
     this.certificate.activities.push(this.activity);
     this.activity = '';
   }
@@ -46,7 +53,11 @@ export class CertificateFormComponent {
       return;
     }
     this.certificate.issueDate = this.currentDate();
+    this.certificate.id = uuidv4();
     this.certificateService.addCertificate(this.certificate);
+
+    this.certificate = this.initialStateCertificate();
+    this.form.resetForm();
   }
 
   currentDate() {
@@ -57,5 +68,14 @@ export class CertificateFormComponent {
 
     const formattedDate = `${day}/${month}/${year}`;
     return formattedDate;
+  }
+
+  initialStateCertificate(): Certificate {
+    return {
+      id:  '',
+      activities: [],
+      name: '',
+      issueDate: ''
+    };
   }
 }

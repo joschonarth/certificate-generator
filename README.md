@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="certificate-generator" src="/navbar/logo.svg" />
+<img alt="certificate-generator" src="./public/navbar/logo.svg" />
 
 # 📜 Certificate Generator
 
@@ -25,7 +25,7 @@
 ---
 
 <a href="https://ng-certificate-generator.netlify.app" target="_blank">
-  <img width="1348" height="677" alt="certificate-generator" src="" />
+  <img width="1366" height="775" alt="screencapture-localhost-4200-certificados-629c509c-3baa-4b8a-8d05-ea50a5c56985-2026-05-01-17_03_27" src="https://github.com/user-attachments/assets/b3f9623e-e72c-43cd-b5dd-8ba83440960c" />
 </a>
 
 ---

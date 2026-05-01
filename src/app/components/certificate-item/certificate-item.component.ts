@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SecondaryButtonComponent } from '../secondary-button/secondary-button.component';
 import { Router } from '@angular/router';
 
@@ -10,11 +10,13 @@ import { Router } from '@angular/router';
   styleUrl: './certificate-item.component.css'
 })
 export class CertificateItemComponent {
-  id = '1';
+  @Input() studantName = '';
+  @Input() issueDate = '';
+  @Input() id = '';
 
   constructor(private router: Router) {}
 
   redirectCertificate() {
-    this.router.navigate(['/certificados', 2]);
+    this.router.navigate(['/certificados', this.id]);
   }
 }
